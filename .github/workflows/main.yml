@@ -21,5 +21,7 @@ jobs:
           python-version: 3.8.5
           token: ${{ github.token }}
       - name: Execute Python file
-        run: python3 tweet.py
+        run: |
+          pip3 install tweepy
+          python3 tweet.py
       
